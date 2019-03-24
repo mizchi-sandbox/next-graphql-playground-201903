@@ -1,0 +1,19 @@
+import React from "react";
+import Link from "next/link";
+
+export function Header() {
+  return (
+    <header>
+      <h1>Next Playground</h1>
+      <div>
+        <Link href="/index">
+          <a>Index</a>
+        </Link>
+        |
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </div>
+    </header>
+  );
+}
