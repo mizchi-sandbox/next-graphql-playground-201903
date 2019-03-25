@@ -6,9 +6,8 @@ import { useQuery } from "react-apollo-hooks";
 
 const GET_USERS = gql`
   query {
-    users {
-      id
-      name
+    hello {
+      message
     }
   }
 `;
@@ -23,15 +22,7 @@ export default function Apollo() {
       </Head>
 
       <Layout>
-        <div>
-          {!loading && (
-            <ul>
-              {data.users.map((u: { id: string; name: string }) => {
-                return <li key={u.id}>{u.name}</li>;
-              })}
-            </ul>
-          )}
-        </div>
+        <div>{!loading && <div>{data.hello.message}</div>}</div>
       </Layout>
     </>
   );
