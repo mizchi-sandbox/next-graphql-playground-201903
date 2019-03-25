@@ -14,6 +14,9 @@ module.exports = {
       jsx: true
     }
   },
+  env: {
+    jest: true
+  },
   settings: {
     react: {
       version: "detect"
