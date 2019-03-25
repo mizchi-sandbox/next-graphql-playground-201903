@@ -25,7 +25,8 @@ export default class MyDocument extends Document<{
         <Head>
           {this.props.styleTags}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="Description" content="Descrpition..." />
+          <meta name="Description" content="Description..." />
+          <link rel="manifest" href="/static/manifest.webmanifest" />
         </Head>
         <body>
           <Main />
