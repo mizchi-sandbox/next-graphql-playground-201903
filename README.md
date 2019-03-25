@@ -4,9 +4,12 @@
 
 - next
 - styled-components
+- jest
+- eslint
 - TypeScript (next-typescript)
 - Workbox (workbox)
 - PWA Support
+- now deploy
 
 ## Develop
 
@@ -24,7 +27,7 @@ $ now deploy
 
 ## Edit your app
 
-`static` files are dummy for PWA.
+`static` files are dummy for PWA. Replace them to production.
 
 ## LICENSE
 
