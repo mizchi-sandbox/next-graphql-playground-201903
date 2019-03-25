@@ -6,7 +6,7 @@ export function Header() {
     <header>
       <h1>Next Playground</h1>
       <div>
-        <Link href="/index">
+        <Link href="/">
           <a>Index</a>
         </Link>
         |
