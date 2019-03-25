@@ -6,6 +6,7 @@ Today's next boilerplate for me.
 
 - next
 - styled-components
+- graphql (apollo)
 - jest
 - eslint
 - TypeScript (next-typescript)
