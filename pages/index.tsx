@@ -1,10 +1,17 @@
 import React from "react";
 import { Layout } from "../components/Layout";
+import Head from "next/head";
 
 export default function Index() {
   return (
-    <Layout>
-      <div>Index</div>
-    </Layout>
+    <>
+      <Head>
+        <title>Index</title>
+      </Head>
+
+      <Layout>
+        <div>Index</div>
+      </Layout>
+    </>
   );
 }

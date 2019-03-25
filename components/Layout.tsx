@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "./Header";
 import styled from "styled-components";
 
-export function Layout(props: { children: React.ReactElement<any> }) {
+export function Layout(props: { children: React.ReactNode }) {
   return (
     <Container>
       <Header />

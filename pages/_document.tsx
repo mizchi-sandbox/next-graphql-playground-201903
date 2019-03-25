@@ -8,7 +8,7 @@ import Document, {
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document<{
-  styleTags: React.ReactElement<any>;
+  styleTags: React.ReactNode;
 }> {
   static getInitialProps({ renderPage }: NextDocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -21,8 +21,12 @@ export default class MyDocument extends Document<{
 
   render() {
     return (
-      <html>
-        <Head>{this.props.styleTags}</Head>
+      <html lang="en">
+        <Head>
+          {this.props.styleTags}
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="Description" content="Descrpition..." />
+        </Head>
         <body>
           <Main />
           <NextScript />
