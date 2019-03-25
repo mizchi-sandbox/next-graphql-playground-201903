@@ -1,4 +1,6 @@
-# my next boilerplate 20190325
+# My next boilerplate 20190325
+
+Today's next boilerplate for me.
 
 ## Stack
 
@@ -7,8 +9,9 @@
 - jest
 - eslint
 - TypeScript (next-typescript)
-- Workbox (workbox)
-- PWA Support
+- Workbox (next-offline)
+- PWA Support (See `static/manifest.webmanifest`)
+- Circle CI
 - now deploy
 
 ## Develop
@@ -25,9 +28,9 @@ $ npm i -g now
 $ now deploy
 ```
 
-## Edit your app
+## Setup your app
 
-`static` files are dummy for PWA. Replace them to production.
+`static` files are dummy for PWA. Replace them for production.
 
 ## LICENSE
 
