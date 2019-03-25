@@ -1,31 +1,27 @@
 import React from "react";
-import App, { Container, NextAppContext } from "next/app";
+import App, { Container } from "next/app";
 import { createGlobalStyle } from "styled-components";
+import withApolloClient from "../lib/withApolloClient";
+import { ApolloClient } from "apollo-boost";
+import { ApolloProvider } from "react-apollo-hooks";
 
-export default class MyApp extends App {
-  static async getInitialProps({ Component, ctx }: NextAppContext) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return { pageProps };
-  }
-
+class ApolloApp extends App<{ apolloClient: ApolloClient<any> }> {
   render() {
-    const { Component, pageProps } = this.props;
-
+    const { Component, pageProps, apolloClient } = this.props;
     return (
       <>
         <GlobalStyle />
         <Container>
-          <Component {...pageProps} />
+          <ApolloProvider client={apolloClient}>
+            <Component {...pageProps} />
+          </ApolloProvider>
         </Container>
       </>
     );
   }
 }
+
+export default withApolloClient(ApolloApp);
 
 const GlobalStyle = createGlobalStyle`
   html, body {

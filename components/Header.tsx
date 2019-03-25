@@ -13,6 +13,10 @@ export function Header() {
         <Link href="/about">
           <a>About</a>
         </Link>
+        |
+        <Link href="/apollo">
+          <a>Apollo</a>
+        </Link>
       </div>
     </header>
   );
