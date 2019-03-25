@@ -3,22 +3,28 @@
 ## Stack
 
 - next
-- TypeScript
 - styled-components
-- next-offline (workbox)
+- TypeScript (next-typescript)
+- Workbox (workbox)
+- PWA Support
 
-## How to develop
+## Develop
 
 ```bash
 $ yarn install
-$ yarn start:dev
+$ yarn dev
 ```
 
-Production
+## Deploy
 
 ```bash
-$ yarn start:prod
+$ npm i -g now
+$ now deploy
 ```
+
+## Edit your app
+
+`static` files are dummy for PWA.
 
 ## LICENSE
 
