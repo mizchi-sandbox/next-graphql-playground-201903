@@ -1,10 +1,11 @@
 import React from "react";
-import { Layout } from "../components/Layout";
 import Head from "next/head";
-import { useUsersQuery } from "../gen/graphql-client-api";
+import { Layout } from "../components/Layout";
+import { useUsersQuery, useAddUserMutation } from "../gen/graphql-client-api";
 
 export default function Apollo() {
-  const { loading, data } = useUsersQuery();
+  const usersQuery = useUsersQuery();
+  const addUser = useAddUserMutation();
 
   return (
     <>
@@ -12,10 +13,18 @@ export default function Apollo() {
         <title>apollo</title>
       </Head>
       <Layout>
+        <button
+          onClick={async _ev => {
+            await addUser({ variables: { name: "foo" } });
+            usersQuery.refetch();
+          }}
+        >
+          addUser
+        </button>
         <div>
-          {!loading && (
+          {!usersQuery.loading && (
             <pre>
-              <code>{JSON.stringify(data)}</code>
+              <code>{JSON.stringify(usersQuery.data, null, 2)}</code>
             </pre>
           )}
         </div>
