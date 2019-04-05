@@ -21,8 +21,9 @@ function createApolloClient(initialState: NormalizedCacheObject) {
     ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
     link: new HttpLink({
       // uri: "https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn", // Server URL (must be absolute)
-      uri: "https://api.graph.cool/simple/v1/cjtntt40j86w601477p8pivia",
-      credentials: "same-origin" // Additional fetch() options like `credentials` or `headers`
+      uri: "http://localhost:3030/graphql"
+      // credentials: true
+      // credentials: "same-origin" // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache().restore(initialState)
   });

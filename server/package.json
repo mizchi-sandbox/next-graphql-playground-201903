@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -c nodemon.json"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "apollo-server-express": "^2.4.8",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.3",
+    "tsconfig-paths": "^3.8.0"
+  }
+}
