@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Layout } from "../components/Layout";
-import { useUsersQuery, useAddUserMutation } from "../gen/graphql-client-api";
+import { useUsersQuery, useAddUserMutation } from "../gen/client-api";
 
 export default function Apollo() {
   const usersQuery = useUsersQuery();

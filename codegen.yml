@@ -5,11 +5,11 @@ documents:
   - ./graphql/queries/*.graphql
   - ./graphql/mutations/*.graphql
 generates:
-  ./server/gen/graphql-resolver-types.ts:
+  ./server/gen/resolver-api.ts:
     plugins:
       - typescript
       - typescript-resolvers
-  ./gen/graphql-client-api.tsx:
+  ./next/gen/client-api.tsx:
     plugins:
       - typescript
       - typescript-operations

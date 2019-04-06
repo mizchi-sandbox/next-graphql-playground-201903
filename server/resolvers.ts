@@ -3,7 +3,7 @@ import {
   MutationResolvers,
   QueryResolvers,
   Resolvers
-} from "./gen/graphql-resolver-types";
+} from "./gen/resolver-api";
 
 type User = {
   id: string;

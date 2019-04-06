@@ -1,10 +1,14 @@
 // for local runner or deploy it self
+const path = require("path");
 const { createServer } = require("http");
 const { join } = require("path");
 const { parse } = require("url");
 const next = require("next");
 
-const app = next({ dev: process.env.NODE_ENV !== "production" });
+const app = next({
+  dev: process.env.NODE_ENV !== "production"
+  // dir: path.join(__dirname, "next")
+});
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
