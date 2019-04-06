@@ -1,12 +1,8 @@
 import React from "react";
 import Renderer from "react-test-renderer";
-import { Layout } from "../Layout";
+import { Header } from "../Header";
 
 test("snapshot example", () => {
-  const tree = Renderer.create(
-    <Layout>
-      <h1>Hello</h1>
-    </Layout>
-  ).toJSON();
+  const tree = Renderer.create(<Header />).toJSON();
   expect(tree).toMatchSnapshot();
 });

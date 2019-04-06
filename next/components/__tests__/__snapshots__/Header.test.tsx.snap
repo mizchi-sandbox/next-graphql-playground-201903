@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot example 1`] = `
+<header>
+  <h1>
+    Next Playground
+  </h1>
+  <div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Index
+    </a>
+    |
+    <a
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+    |
+    <a
+      href="/apollo"
+      onClick={[Function]}
+    >
+      Apollo
+    </a>
+  </div>
+</header>
+`;
